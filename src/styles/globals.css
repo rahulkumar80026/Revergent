@@ -1,0 +1,32 @@
+.custom-container {
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Custom responsive container to match your 1370px design */
+.custom-container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+@media (max-width: 1370px) {
+  .custom-container {
+    max-width: 1200px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .custom-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

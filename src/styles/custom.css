@@ -1,0 +1,29 @@
+.big-ideas__item-type {
+  position: absolute;
+  top: 13px;
+  right: -22px;
+  z-index: 3;
+  font-size: 13px;
+  line-height: 1;
+  color: #fff;
+  padding: 9px 10px;
+  border-radius: 10px;
+  min-width: 75px;
+  text-align: center;
+}
+
+.big-ideas__item:nth-child(1) .big-ideas__item-type {
+  background-color: #5DDDA3;
+}
+
+.big-ideas__item-type.Whitepaper {
+  background-color: #15BDFF;
+}
+
+.big-ideas__item-type.Case\ Study {
+  background-color: #A748FF;
+}
+
+.big-ideas__item-type.Solution\ Briefs {
+  background-color: #0066FF;
+}

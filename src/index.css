@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./assets/fonts/Agrandir-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./assets/fonts/Agrandir-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Apply globally */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Agrandir', sans-serif;
+}
+
+/* globals.css or tailwind base */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Agrandir font fallback — add @font-face if you host it */
+.font-agrandir { font-family: "Agrandir", sans-serif; }
