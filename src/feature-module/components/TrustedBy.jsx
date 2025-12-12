@@ -44,45 +44,70 @@ const TrustedBy = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-7 overflow-hidden">
-      <p class="text-center text-[16px] font-[400] leading-[1.43] text-[#021D59] mb-6 z-[100] relative font-['Helvetica']">
+    <section className="w-full bg-white py-8 sm:py-10 overflow-hidden relative">
+      {/* TITLE */}
+      <p className="text-center text-[14px] sm:text-[16px] text-[#021D59] mb-6 font-[400] relative z-[10]">
         Trusted by global leaders
       </p>
 
+      {/* FADE EFFECTS */}
+      <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-white to-transparent pointer-events-none z-[5]" />
+      <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent pointer-events-none z-[5]" />
+
+      {/* SCROLLING WRAPPER */}
       <div className="overflow-hidden">
-        <div className="flex gap-12 animate-logo-scroll whitespace-nowrap">
-          {/* First Loop */}
+        <div
+          className="flex whitespace-nowrap gap-6 sm:gap-10 md:gap-12 animate-logo-scroll hover:animate-pause"
+        >
+          {/* Loop 1 */}
           {logos.map((src, index) => (
             <img
               key={index}
               src={src}
               alt="logo"
-              className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition"
+              className="
+                h-8 sm:h-10 md:h-12 lg:h-12 
+                w-auto object-contain 
+                opacity-90 hover:opacity-100 
+                transition
+              "
             />
           ))}
 
-          {/* Second Loop — for seamless infinite scroll */}
+          {/* Loop 2 for infinite scroll */}
           {logos.map((src, index) => (
             <img
               key={index + logos.length}
               src={src}
               alt="logo"
-              className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition"
+              className="
+                h-8 sm:h-10 md:h-12 lg:h-12 
+                w-auto object-contain 
+                opacity-90 hover:opacity-100 
+                transition
+              "
             />
           ))}
         </div>
       </div>
 
-      {/* Animation Speed: EXACTLY Evergent (78 seconds) */}
-      <style>{`
-        @keyframes logo-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-logo-scroll {
-          animation: logo-scroll 78s linear infinite;
-        }
-      `}</style>
+      <style>
+        {`
+          @keyframes logo-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+
+          .animate-logo-scroll {
+            animation: logo-scroll 20s linear infinite;
+          }
+
+          /* Pause on hover */
+          .animate-logo-scroll:hover {
+            animation-play-state: paused;
+          }
+        `}
+      </style>
     </section>
   );
 };

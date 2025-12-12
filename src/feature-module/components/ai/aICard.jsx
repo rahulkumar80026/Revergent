@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./Icon";
+import Icon from "../Icon";
 
 // const AICard = ({ iconPath, title, description, isDark }) => {
 //   const cardBg = isDark
@@ -22,12 +22,12 @@ import Icon from "./Icon";
 // };
 
 // const AICard = ({ title, description, isDark }) => (
-//   <div 
+//   <div
 //     className={`
-//       p-8 rounded-2xl shadow-xl transition-all duration-500 transform 
+//       p-8 rounded-2xl shadow-xl transition-all duration-500 transform
 //       hover:scale-[1.03] hover:shadow-2xl hover:border-r-4 hover:border-b-4
-//       ${isDark 
-//         ? 'bg-[#19183b] text-[#e7f2ef] border border-[#212040] hover:border-[#a1c2bd]' 
+//       ${isDark
+//         ? 'bg-[#19183b] text-[#e7f2ef] border border-[#212040] hover:border-[#a1c2bd]'
 //         : 'bg-white text-[#19183b] border border-[#e7f2ef] hover:border-[#708993]'}
 //     `}
 //   >
@@ -39,19 +39,18 @@ import Icon from "./Icon";
 //   </div>
 // );
 
-
 // const AICard = ({ title, description, Icon, isDark }) => (
-//   <div 
+//   <div
 //     className={`
-//       p-8 rounded-2xl shadow-xl transition-all duration-500 transform 
+//       p-8 rounded-2xl shadow-xl transition-all duration-500 transform
 //       hover:scale-[1.03] hover:shadow-2xl hover:border-r-4 hover:border-b-4
 //       ${!isDark // Light Mode
-//         ? 'bg-white text-[#19183b] border border-[#e7f2ef] hover:border-[#708993]' 
+//         ? 'bg-white text-[#19183b] border border-[#e7f2ef] hover:border-[#708993]'
 //         : 'bg-[#19183b] text-[#e7f2ef] border border-[#212040] hover:border-[#a1c2bd]'}
 //     `}
 //   >
 //     <div className={`p-3 w-14 h-14 mb-4 rounded-lg flex items-center justify-center text-3xl font-bold bg-[#a1c2bd] text-[#19183b]`}>
-//       <Icon className="w-7 h-7" /> 
+//       <Icon className="w-7 h-7" />
 //     </div>
 //     <h3 className={`text-2xl font-bold mb-3 ${!isDark ? 'text-[#19183b]' : 'text-[#e7f2ef]'}`}>{title}</h3>
 //     <p className={`text-[#708993] text-base`}>{description}</p>
@@ -59,19 +58,29 @@ import Icon from "./Icon";
 // );
 
 const AICard = ({ title, description, Icon, isDark }) => (
-  <div 
+  <div
     className={`
       p-8 rounded-2xl shadow-xl transition-all duration-500 transform 
       hover:scale-[1.03] hover:shadow-2xl hover:border-r-4 hover:border-b-4
-      ${!isDark // Light Mode
-        ? 'bg-white text-[#19183b] border border-[#e7f2ef] hover:border-[#708993]' 
-        : 'bg-[#19183b] text-[#e7f2ef] border border-[#212040] hover:border-[#a1c2bd]'}
+      ${
+        !isDark // Light Mode
+          ? "bg-white text-[#19183b] border border-[#e7f2ef] hover:border-[#708993]"
+          : "bg-[#19183b] text-[#e7f2ef] border border-[#212040] hover:border-[#a1c2bd]"
+      }
     `}
   >
-    <div className={`p-3 w-14 h-14 mb-4 rounded-lg flex items-center justify-center text-3xl font-bold bg-[#a1c2bd] text-[#19183b]`}>
-      <Icon className="w-7 h-7" /> 
+    <div
+      className={`p-3 w-14 h-14 mb-4 rounded-lg flex items-center justify-center text-3xl font-bold bg-[#a1c2bd] text-[#19183b]`}
+    >
+      <Icon className="w-7 h-7" />
     </div>
-    <h3 className={`text-2xl font-bold mb-3 ${!isDark ? 'text-[#19183b]' : 'text-[#e7f2ef]'}`}>{title}</h3>
+    <h3
+      className={`text-2xl font-bold mb-3 ${
+        !isDark ? "text-[#19183b]" : "text-[#e7f2ef]"
+      }`}
+    >
+      {title}
+    </h3>
     <p className={`text-[#708993] text-base`}>{description}</p>
   </div>
 );

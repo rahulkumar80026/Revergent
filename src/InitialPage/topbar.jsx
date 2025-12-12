@@ -53,7 +53,7 @@ const TopBar = () => {
 
         {/* Button: Reduced padding from py-3 to py-2, and text size to text-sm */}
         <a
-          href="https://evergent.com/themonetizationshow/"
+          href="https://revergent.com/"
           className="ml-3 px-4 py-2 rounded-full text-white font-normal text-sm shadow-xl transition duration-300 hover:opacity-90 flex items-center justify-center"
           style={{
             backgroundColor: buttonCyanRef,

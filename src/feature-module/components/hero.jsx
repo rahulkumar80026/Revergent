@@ -1,4 +1,10 @@
 import React from "react";
+import colored_bg from "../../assets/img/colored-bg.svg";
+import dotted_icon from "../../assets/img/dotted-icon.svg";
+import paper_icon from "../../assets/img/paper-icon.svg";
+import dollar from "../../assets/img/dollar.svg";
+import violet_vector from "../../assets/img/violet-vector.svg";
+import card from "../../assets/img/card.svg";
 
 const HeroSection = () => {
   return (
@@ -34,20 +40,13 @@ const HeroSection = () => {
         />
         {/* BACKGROUND SVG CONTROLLED HEIGHT */}
         <div className="absolute h-full overflow-hidden">
-          <img
-            src="https://evergent.com/wp-content/uploads/revslider/homepage-main-1-1-11072025/colored-bg.svg"
-            alt=""
-            className="object-cover object-top"
-          />
+          <img src={colored_bg} alt="" className="object-cover object-top" />
         </div>
       </div>
 
       {/* Square Outline (top-left) */}
       <div className="absolute top-[-6%] left-[17%]">
-        <img
-          src="https://evergent.com/wp-content/uploads/revslider/homepage-main-1-1-11072025/dotted-icon.svg"
-          alt=""
-        />
+        <img src={dotted_icon} alt="" />
       </div>
 
       <div className="absolute top-[18%] left-[33%] float">
@@ -57,10 +56,7 @@ const HeroSection = () => {
       {/* Receipt (top-right) */}
       <div className="absolute top-[1%] right-[14.5%]">
         <div>
-          <img
-            src="https://evergent.com/wp-content/uploads/revslider/homepage-main-1-1-11072025/paper-icon.svg"
-            alt=""
-          />
+          <img src={paper_icon} alt="" />
         </div>
         {/* <div className="w-28 h-36 bg-white shadow-2xl rounded-md p-3">
           <div className="space-y-2">
@@ -75,10 +71,7 @@ const HeroSection = () => {
 
       {/* Dollar Floating Icon */}
       <div className="absolute bottom-[4%] right-[13.5%]">
-        <img
-          src="https://evergent.com/wp-content/uploads/revslider/homepage-main-1-1-11072025/dollar.svg"
-          alt=""
-        />
+        <img src={dollar} alt="" />
         {/* <div className="relative">
           <div className="w-24 h-24 bg-gradient-to-br from-cyan-300 to-cyan-400 rounded-full shadow-2xl flex items-center justify-center border-4 border-white/50">
             <span className="text-4xl font-bold text-cyan-900">$</span>
@@ -92,10 +85,7 @@ const HeroSection = () => {
       </div>
 
       <div className="absolute bottom-[0%] left-[20.5%] float2">
-        <img
-          src="https://evergent.com/wp-content/uploads/revslider/homepage-main-1-1-11072025/violet-vector.svg"
-          alt=""
-        />
+        <img src={violet_vector} alt="" />
       </div>
 
       {/* Credit Card (Bottom-left) */}
@@ -108,10 +98,7 @@ const HeroSection = () => {
           </div>
         </div> */}
         <div>
-          <img
-            src="https://evergent.com/wp-content/uploads/revslider/homepage-main-1-1-11072025/card.svg"
-            alt=""
-          />
+          <img src={card} alt="" />
         </div>
       </div>
       <div className="relative z-10 text-white text-center mx-auto max-w-[1100px] pt-[46px]">

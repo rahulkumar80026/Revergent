@@ -1,5 +1,5 @@
 // import React from "react";
-// import AICard from "./aICard";  
+// import AICard from "./aICard";
 
 // const AIPromise = ({ isDark }) => {
 //   const sectionBg = isDark ? "bg-gray-800" : "bg-indigo-50";
@@ -62,7 +62,7 @@
 // export default AIPromise;
 
 // import React from "react";
-// import AICard from "./aICard";  
+// import AICard from "./aICard";
 
 // // --- NEW COLOR PALETTE ---
 // const DEEP_MIDNIGHT_BLUE = "#19183B";
@@ -141,12 +141,31 @@
 
 // export default AIPromise;
 
-import React from 'react';
+import React from "react";
 import AICard from "./aICard";
-import { Moon, Sun, ArrowRight, Zap, TrendingUp, Cpu, Code, Globe, Layers, Shield, Server, Repeat, Terminal, AlertTriangle, Home, X, Bot, BarChart2, MessageCircle } from 'lucide-react';
-import Button from './button';
-import SectionTitle from './SectionTitle';
-
+import {
+  Moon,
+  Sun,
+  ArrowRight,
+  Zap,
+  TrendingUp,
+  Cpu,
+  Code,
+  Globe,
+  Layers,
+  Shield,
+  Server,
+  Repeat,
+  Terminal,
+  AlertTriangle,
+  Home,
+  X,
+  Bot,
+  BarChart2,
+  MessageCircle,
+} from "lucide-react";
+import Button from "../button";
+import SectionTitle from "./SectionTitle";
 
 // export const AIPromise = () => {
 //   const aiCards = [
@@ -173,19 +192,19 @@ import SectionTitle from './SectionTitle';
 //         title="AI-First: The Gemini Advantage"
 //         subtitle="Intelligence Integration"
 //       />
-      
+
 //       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 //         <p className="text-xl md:text-2xl text-[#708993] dark:text-[#708993] text-center max-w-4xl mx-auto mb-16">
 //           We integrate advanced generative AI models, including Google's Gemini, directly into your business processes, transforming data into actionable intelligence.
 //         </p>
-        
+
 //         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 //           {aiCards.map((card, index) => (
 //             // FIX: Removed the JSX block comment at the end of the element to resolve the compiler error.
-//             <AICard key={index} {...card} isDark={false} /> 
+//             <AICard key={index} {...card} isDark={false} />
 //           ))}
 //         </div>
-        
+
 //         <div className="text-center mt-16">
 //           <Button primary={false} className="text-lg">
 //             Request an AI Demo
@@ -199,48 +218,65 @@ import SectionTitle from './SectionTitle';
 const AIPromise = ({ isDark }) => {
   const aiCards = [
     {
-      Icon: Zap, 
+      Icon: Zap,
       title: "Intelligent Automation",
-      description: "Automating complex workflows and decision-making processes using custom-trained AI agents for efficiency.",
+      description:
+        "Automating complex workflows and decision-making processes using custom-trained AI agents for efficiency.",
     },
     {
-      Icon: BarChart2, 
+      Icon: BarChart2,
       title: "Predictive Analytics",
-      description: "Leveraging machine learning for precise forecasting of market trends, user behavior, and operational needs.",
+      description:
+        "Leveraging machine learning for precise forecasting of market trends, user behavior, and operational needs.",
     },
     {
-      Icon: MessageCircle, 
+      Icon: MessageCircle,
       title: "Conversational Interfaces",
-      description: "Developing advanced, contextual chatbots and voice assistants for superior user support and engagement.",
+      description:
+        "Developing advanced, contextual chatbots and voice assistants for superior user support and engagement.",
     },
   ];
 
   return (
-        <section className="relative py-24 overflow-hidden" style={{ backgroundColor: isDark ? '#1a1d3a' : '#e8f0ef' }}>
+    <section
+      className="relative py-24 overflow-hidden"
+      style={{ backgroundColor: isDark ? "#1a1d3a" : "#e8f0ef" }}
+    >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{ backgroundColor: '#5f8296' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: '#a8c0bc', animation: 'pulse 3s ease-in-out infinite' }}></div>
+        <div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse"
+          style={{ backgroundColor: "#5f8296" }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl"
+          style={{
+            backgroundColor: "#a8c0bc",
+            animation: "pulse 3s ease-in-out infinite",
+          }}
+        ></div>
       </div>
 
-    {/* <section id="ai-promise" className={`py-24 md:py-32 ${!isDark ? 'bg-[#e7f2ef]' : 'bg-[#19183b]'} transition-colors duration-500`}> */}
+      {/* <section id="ai-promise" className={`py-24 md:py-32 ${!isDark ? 'bg-[#e7f2ef]' : 'bg-[#19183b]'} transition-colors duration-500`}> */}
       <SectionTitle
         title="AI-First: The Gemini Advantage"
         subtitle="Intelligence Integration"
         isDark={isDark}
       />
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <p className="text-xl md:text-2xl text-[#708993] text-center max-w-4xl mx-auto mb-16">
-          We integrate advanced generative AI models, including Google's Gemini, directly into your business processes, transforming data into actionable intelligence.
+          We integrate advanced generative AI models, including Google's Gemini,
+          directly into your business processes, transforming data into
+          actionable intelligence.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {aiCards.map((card, index) => (
-            <AICard key={index} {...card} isDark={isDark} /> 
+            <AICard key={index} {...card} isDark={isDark} />
           ))}
         </div>
-        
+
         <div className="text-center mt-16">
           <Button primary={false} className="text-lg">
             Request an AI Demo

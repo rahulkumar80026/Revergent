@@ -1,5 +1,8 @@
 import React from "react";
 import Button from "../../core/common/Button";
+import img1 from "../../assets/img/customer-retention-whitempaper-thumbnail-161x217.png";
+import img2 from "../../assets/img/aha-case-study-thumbnail-1-161x217.png";
+import img3 from "../../assets/img/cap-essentials-161x217.png";
 
 const data = [
   {
@@ -7,8 +10,8 @@ const data = [
     excerpt:
       "A clear guide to understanding why customers leave—and the steps you can take today to strengthen long-term loyalty.",
     badge: "Whitepaper",
-    img: "https://evergent.com/wp-content/uploads/2023/06/customer-retention-whitempaper-thumbnail-161x217.png",
-    link: "https://evergent.com/resources-type/whitepaper/customer-retention-strategies-reduce-churn/",
+    img: img1,
+    link: "https://revergent.in/",
   },
   {
     title:
@@ -16,16 +19,16 @@ const data = [
     excerpt:
       "How one team rebuilt their platform for faster performance, better customer experience, and long-term stability.",
     badge: "Case Study",
-    img: "https://evergent.com/wp-content/uploads/2023/04/aha-case-study-thumbnail-1-161x217.png",
-    link: "https://evergent.com/resources-type/case-study/transforming-platform-capability-aha-move/",
+    img: img2,
+    link: "https://revergent.in/",
   },
   {
     title: "AI-Driven Churn Control: A Smarter Approach to Customer Retention",
     excerpt:
       "See how AI can help predict risk, personalize engagement, and reduce churn before it impacts your bottom line.",
     badge: "Solution Briefs",
-    img: "https://evergent.com/wp-content/uploads/2023/05/cap-essentials-161x217.png",
-    link: "https://evergent.com/resources-type/solution-briefs/evergent-captivate-product-sheet/",
+    img: img3,
+    link: "https://revergent.in/",
   },
 ];
 
@@ -119,17 +122,7 @@ const BigIdeasSection = () => {
   return (
     <section className="bg-white relative">
       {/* GRADIENT BEHIND BUTTON (starts early) */}
-      <div
-        className="
-          absolute w-full h-[180px]
-          bg-gradient-to-b 
-          from-white 
-          via-[#F4FAFF] 
-          to-[#E9F4FF]
-          top-[520px]   /* perfect placement */
-          -z-10
-        "
-      ></div>
+      <div className="absolute w-full h-[180px] bg-gradient-to-b from-white via-[#F4FAFF] to-[#E9F4FF] top-[520px] /* perfect placement */ -z-10"></div>
 
       <div className="custom-container big-ideas__container relative z-10">
         <h2 className="text-center text-[34px] text-[#021D59] font-semibold mb-2">
