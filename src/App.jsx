@@ -5,7 +5,7 @@ import Header from "./InitialPage/header";
 
 import Hero from "./feature-module/components/hero";
 import TrustedBy from "./feature-module/components/TrustedBy";
-import WhyRevergentSection from "./feature-module/components/WhyRevergent";
+import WhyRevergent from "./feature-module/components/WhyRevergent";
 import UseCases from "./feature-module/components/UseCases";
 
 import BusinessSidekick from "./feature-module/components/BusinessSidekick/BusinessSidekick";
@@ -13,7 +13,6 @@ import BusinessSidekick from "./feature-module/components/BusinessSidekick/Busin
 import AboutUs from "./feature-module/pages/about";
 import Contact from "./feature-module/pages/contact";
 import Careers from "./feature-module/pages/career";
-import NotFoundPage from "./feature-module/pages/error404";
 import Footer from "./feature-module/pages/footer";
 import AIChatbot from "./feature-module/components/ai/aIChatbot";
 import CookieConsentBanner from "./feature-module/components/CookieConsentBanner";
@@ -39,7 +38,8 @@ const App = () => {
   }, [isDark]);
 
   // This state change happens AFTER the banner slide-out animation starts
-  const handleConsentAction = (accepted) => setCookieConsentStatus(accepted ? "accepted" : "declined");
+  const handleConsentAction = (accepted) =>
+    setCookieConsentStatus(accepted ? "accepted" : "declined");
 
   return (
     <Router>
@@ -56,7 +56,7 @@ const App = () => {
               <>
                 <Hero />
                 <TrustedBy />
-                <WhyRevergentSection />
+                <WhyRevergent />
                 <UseCases />
                 <BusinessSidekick />
                 <BigIdeas />

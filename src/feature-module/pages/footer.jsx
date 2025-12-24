@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import logo_1 from "../../../assets/img/comp/logo_white.png";
+import logo_1 from "../../assets/img/comp/logo_white.png";
 
 const Footer = () => {
   // Links updated for Revergent Technologies specialization
@@ -35,7 +35,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#021D59] text-white text-sm pt-14 pb-10">
-      <div className="max-w-[1300px] mx-auto px-6">
+      <div className="custom-container">
         {/* GRID LAYOUT */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 border-b border-white/10 pb-12">
           
