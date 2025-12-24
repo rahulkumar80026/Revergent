@@ -1,8 +1,8 @@
 import React from "react";
 
-const WhyEvergentSection = () => {
+const WhyRevergent = () => {
   return (
-    <section className="relative w-full bg-white pt-24 pb-40 overflow-hidden">
+    <section className="relative w-full bg-white pt-24 pb-30 overflow-hidden">
       {/* MAIN PARAGRAPH */}
       <div className="max-w-[900px] mx-auto text-center px-6 mb-24">
         <p className="text-[#021D59] text-[24px] leading-[34px] font-normal">
@@ -95,4 +95,4 @@ const WhyEvergentSection = () => {
   );
 };
 
-export default WhyEvergentSection;
+export default WhyRevergent;

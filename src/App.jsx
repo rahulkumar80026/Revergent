@@ -5,24 +5,24 @@ import Header from "./InitialPage/header";
 
 import Hero from "./feature-module/components/hero";
 import TrustedBy from "./feature-module/components/TrustedBy";
-import WhyEvergentSection from "./feature-module/components/WhyEvergentSection";
-import UseCasesSection from "./feature-module/components/UseCasesSection";
+import WhyRevergentSection from "./feature-module/components/WhyRevergent";
+import UseCases from "./feature-module/components/UseCases";
 
 import BusinessSidekick from "./feature-module/components/BusinessSidekick/BusinessSidekick";
 
-import AboutUs from "./feature-module/components/pages/about";
-import Contact from "./feature-module/components/pages/contact";
-import Careers from "./feature-module/components/pages/career";
-import NotFoundPage from "./feature-module/components/pages/error404";
-import Footer from "./feature-module/components/pages/footer";
+import AboutUs from "./feature-module/pages/about";
+import Contact from "./feature-module/pages/contact";
+import Careers from "./feature-module/pages/career";
+import NotFoundPage from "./feature-module/pages/error404";
+import Footer from "./feature-module/pages/footer";
 import AIChatbot from "./feature-module/components/ai/aIChatbot";
 import CookieConsentBanner from "./feature-module/components/CookieConsentBanner";
 import { COOKIE_KEY } from "../environment";
 import ScrollToTop from "./core/common/ScrollToTop";
-import BigIdeasSection from "./feature-module/components/BigIdeasSection";
-import NextStepSection from "./feature-module/components/NextStepSection";
+import BigIdeas from "./feature-module/components/BigIdeas";
+import NextStep from "./feature-module/components/NextStep";
 import RequestDemo from "./feature-module/components/RequestDemo";
-import Error404 from "./feature-module/components/pages/error404";
+import Error404 from "./feature-module/pages/error404";
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -39,8 +39,7 @@ const App = () => {
   }, [isDark]);
 
   // This state change happens AFTER the banner slide-out animation starts
-  const handleConsentAction = (accepted) =>
-    setCookieConsentStatus(accepted ? "accepted" : "declined");
+  const handleConsentAction = (accepted) => setCookieConsentStatus(accepted ? "accepted" : "declined");
 
   return (
     <Router>
@@ -57,11 +56,11 @@ const App = () => {
               <>
                 <Hero />
                 <TrustedBy />
-                <WhyEvergentSection />
-                <UseCasesSection />
+                <WhyRevergentSection />
+                <UseCases />
                 <BusinessSidekick />
-                <BigIdeasSection />
-                <NextStepSection />
+                <BigIdeas />
+                <NextStep />
               </>
             }
           />

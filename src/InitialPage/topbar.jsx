@@ -47,7 +47,7 @@ const TopBar = () => {
         {/* Text: Reduced from text-xl to text-lg */}
         <div className="hidden md:block">
           <p className="text-white font-normal text-lg" style={{ margin: 0 }}>
-            What is the Future of Monetization in M&E?
+            Where human ambition becomes intelligent possibility
           </p>
         </div>
 
@@ -60,7 +60,7 @@ const TopBar = () => {
             whiteSpace: "nowrap",
           }}
         >
-          Listen to The Monetization Show
+          Explore What’s Possible With Us
         </a>
 
         {/* Mic Icon: Reduced size from w-10 h-10 to w-8 h-8 */}

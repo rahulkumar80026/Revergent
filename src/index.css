@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: 'Agrandir';
   src: url('./assets/fonts/Agrandir-Regular.otf') format('opentype');

@@ -80,10 +80,10 @@ const DotStrip = () => (
 );
 
 const BigIdeasCard = ({ item, index }) => (
-  <div className="big-card w-[535px] bg-white rounded-2xl shadow-xl p-6 relative transition-all duration-500 hover:-translate-y-2">
-    <div className="flex justify-between items-start gap-4">
+  <div className="big-card w-full max-w-[535px] bg-white rounded-2xl shadow-xl p-6 relative transition-all duration-500 hover:-translate-y-2">
+    <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
       <div className="flex-1">
-        <p className="text-[22px] font-normal text-[#021D59] leading-[26px] mb-3">
+        <p className="text-[20px] sm:text-[22px] font-normal text-[#021D59] leading-[26px] mb-3">
           <a href={item.link} className="hover:text-blue-600">
             {item.title}
           </a>
@@ -91,22 +91,22 @@ const BigIdeasCard = ({ item, index }) => (
 
         <DotStrip />
 
-        <p className="text-[#4A5C80] text-[15px] leading-[22px]">
+        <p className="text-[#4A5C80] text-[14px] sm:text-[15px] leading-[22px]">
           {item.excerpt}
         </p>
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full sm:w-auto">
         <a href={item.link}>
           <img
             src={item.img}
             alt="resource"
-            className="w-[161px] h-auto rounded-lg"
+            className="w-full max-w-[161px] sm:w-[161px] h-auto rounded-lg"
           />
         </a>
 
         <p
-          className="absolute top-[13px] right-[-22px] z-[3] text-white text-[13px] leading-[1] px-[10px] py-[9px] rounded-[10px] min-w-[75px] text-center"
+          className="absolute top-3 right-3 sm:right-[-22px] z-[3] text-white text-[12px] sm:text-[13px] px-[10px] py-[8px] rounded-[10px] min-w-[75px] text-center"
           style={{
             backgroundColor: index === 0 ? "#5DDDA3" : badgeColors[item.badge],
           }}
@@ -118,9 +118,9 @@ const BigIdeasCard = ({ item, index }) => (
   </div>
 );
 
-const BigIdeasSection = () => {
+const BigIdeas = () => {
   return (
-    <section className="bg-white relative">
+    <section className="bg-white relative pb-20 lg:pb-10">
       {/* GRADIENT BEHIND BUTTON (starts early) */}
       <div className="absolute w-full h-[180px] bg-gradient-to-b from-white via-[#F4FAFF] to-[#E9F4FF] top-[520px] /* perfect placement */ -z-10"></div>
 
@@ -144,7 +144,7 @@ const BigIdeasSection = () => {
           </div>
         </div>
 
-        <div className="text-center mt-20">
+        <div className="text-center mt-12 lg:mt-20">
           <Button>More Resources</Button>
         </div>
       </div>
@@ -152,4 +152,4 @@ const BigIdeasSection = () => {
   );
 };
 
-export default BigIdeasSection;
+export default BigIdeas;
