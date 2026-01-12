@@ -133,16 +133,12 @@
 // export default DesktopNavItem;
 
 import React from "react";
-import { ChevronDown } from "lucide-react";
 import arrow from "../../assets/icon/arrow.svg";
 
 const DesktopNavItem = ({ item }) => {
   const hasSubmenu = Array.isArray(item.submenu) && item.submenu.length > 0;
   const isMegaMenu = hasSubmenu && item.submenu[0]?.section;
 
-  // ----------------------------------------------------------
-  // EVERGENT MEGA MENU (Corrected to exact Evergent styling)
-  // ----------------------------------------------------------
   const renderMegaMenu = (sections) => (
     <div
       className="
@@ -219,9 +215,6 @@ const DesktopNavItem = ({ item }) => {
     </div>
   );
 
-  // ----------------------------------------------------------
-  // EVERGENT SIMPLE MENU (Already Perfect — Only polish)
-  // ----------------------------------------------------------
   const renderSimpleMenu = (items) => (
     <ul
       className="
@@ -233,7 +226,6 @@ const DesktopNavItem = ({ item }) => {
         group-hover:opacity-100 group-hover:visible
         translate-y-4 group-hover:translate-y-2
         transition-all duration-200 ease-out
-
         z-[9999]
       "
     >
@@ -245,10 +237,12 @@ const DesktopNavItem = ({ item }) => {
               block px-4 py-2.5
               text-[14px] text-[#021D59]
               hover:text-[#15BDFF]
-              hover:bg-[#F4FAFF]
+              hover:bg-[#15BDFF1A]
               rounded-lg
               transition-colors
             "
+            // hover:bg-[#F4FAFF]
+            // hover:bg-[#15bdff33]
           >
             {s.title}
           </a>
@@ -257,9 +251,6 @@ const DesktopNavItem = ({ item }) => {
     </ul>
   );
 
-  // ----------------------------------------------------------
-  // MAIN NAV ITEM (Evergent accurate)
-  // ----------------------------------------------------------
   return (
     <li className="group relative">
       <a

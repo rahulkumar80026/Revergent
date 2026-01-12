@@ -22,6 +22,10 @@ import BigIdeas from "./feature-module/components/BigIdeas";
 import NextStep from "./feature-module/components/NextStep";
 import RequestDemo from "./feature-module/components/RequestDemo";
 import Error404 from "./feature-module/pages/error404";
+import Pos from "./feature-module/pages/products/pos";
+import Classora from "./feature-module/pages/products/classora";
+import Crm from "./feature-module/pages/products/crm";
+import AiAutomationSuite from "./feature-module/pages/products/aiAutomationSuite";
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -65,6 +69,11 @@ const App = () => {
             }
           />
           <Route path="/request-a-demo" element={<RequestDemo />} />
+          <Route path="/products/pos" element={<Pos />} />
+          <Route path="/products/classora" element={<Classora />} />
+          <Route path="/products/cloud-crm" element={<Crm />} />
+          <Route path="/products/ai-suite" element={<AiAutomationSuite />} />
+
           <Route path="/solutions" element={<AboutUs isDark={isDark} />} />
           <Route path="/about" element={<AboutUs isDark={isDark} />} />
           <Route path="/contact" element={<Contact isDark={isDark} />} />
