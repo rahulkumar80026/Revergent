@@ -144,9 +144,13 @@ const DesktopNavItem = ({ item }) => {
   // EVERGENT MEGA MENU (Corrected to exact Evergent styling)
   // ----------------------------------------------------------
   const renderMegaMenu = (sections) => (
-  <div
-    className="
-      absolute left-1/2 -translate-x-1/2
+    <div
+      className="
+      absolute lg:left-1/2 lg:-translate-x-1/2
+
+      left-1/2 -translate-x-1/2
+      lg:translate-y-5 translate-y-4
+
       bg-white rounded-[14px]
       border border-[#E6E9F0]
       shadow-[0_22px_60px_rgba(0,0,0,0.12)]
@@ -155,7 +159,7 @@ const DesktopNavItem = ({ item }) => {
 
       opacity-0 invisible
       group-hover:opacity-100 group-hover:visible
-      translate-y-5 group-hover:translate-y-3
+      group-hover:translate-y-3
       transition-all duration-300 ease-out
 
       z-[9999]
@@ -167,9 +171,9 @@ const DesktopNavItem = ({ item }) => {
       md:w-[700px]
       sm:w-[90vw]
     "
-  >
-    <div
-      className="
+    >
+      <div
+        className="
         grid gap-12
 
         /* DESKTOP → 4 columns */
@@ -185,36 +189,35 @@ const DesktopNavItem = ({ item }) => {
         /* SMALL → 1 column */
         sm:grid-cols-1
       "
-    >
-      {sections.map((section, idx) => (
-        <div key={idx}>
-          <p className="text-[11px] uppercase font-bold text-[#5C6D88] mb-4 tracking-wide">
-            {section.section}
-          </p>
+      >
+        {sections.map((section, idx) => (
+          <div key={idx}>
+            <p className="text-[11px] uppercase font-bold text-[#5C6D88] mb-4 tracking-wide">
+              {section.section}
+            </p>
 
-          <ul className="space-y-2">
-            {section.items?.map((link, i) => (
-              <li key={i}>
-                <a
-                  href={link.href}
-                  className="
+            <ul className="space-y-2">
+              {section.items?.map((link, i) => (
+                <li key={i}>
+                  <a
+                    href={link.href}
+                    className="
                     block text-[15px]
                     text-[#021D59]
                     hover:text-[#15BDFF]
                     transition-colors duration-150
                   "
-                >
-                  {link.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+                  >
+                    {link.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
-
+  );
 
   // ----------------------------------------------------------
   // EVERGENT SIMPLE MENU (Already Perfect — Only polish)

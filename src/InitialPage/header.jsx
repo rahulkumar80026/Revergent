@@ -14,13 +14,12 @@ const Header = () => {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-white border-b border-[#EBEEF5] shadow-sm">
+    <header className="relative w-full sticky top-0 z-50 bg-white border-b border-[#EBEEF5] shadow-sm">
       <div className="custom-container">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[50px] lg:h-20">
           {/* LEFT: LOGO + NAV */}
           <div className="flex items-center gap-4">
-            {/* Logo */}
-            <CompLogo className="w-32 md:w-36 lg:w-50" />
+            <CompLogo className="w-28 md:w-32 lg:w-50" />
 
             {/* Desktop Nav */}
             <nav className="hidden lg:block ml-20 xl:ml-28 2xl:ml-36">
@@ -33,21 +32,20 @@ const Header = () => {
           </div>
 
           {/* RIGHT: CTA + Mobile Toggle */}
-          <div className="flex items-center gap-6">
-            {/* CTA */}
+          <div className="flex items-center gap-4">
             <button
               onClick={() => navigate("/request-a-demo")}
-              className=" hidden lg:inline-flex items-center justify-center px-5 py-2 rounded-[14px] bg-[#15BDFF] text-white text-sm shadow-md hover:bg-[#021D59] transition-all "
+              className="hidden lg:inline-flex items-center justify-center px-5 py-2 rounded-[14px] bg-[#15BDFF] text-white text-sm shadow-md hover:bg-[#021D59] transition-all"
             >
               Request a Demo
             </button>
 
-            {/* Mobile Icon */}
+            {/* Mobile Menu Toggle */}
             <button
               className="lg:hidden p-2 rounded-full text-gray-700 hover:bg-gray-100 transition"
               onClick={toggleMobileMenu}
             >
-              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
         </div>
@@ -55,25 +53,38 @@ const Header = () => {
 
       {/* MOBILE MENU PANEL */}
       <div
-        className={`fixed inset-0 bg-white z-40 lg:hidden transition-transform duration-300
+        className={`fixed top-0 right-0 h-[calc(100vh-50px)] w-full bg-white z-40 lg:hidden
+          transform transition-transform duration-300 ease-in-out
           ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        <div className="pt-20 px-6">
+        {/* Top Action Bar */}
+        <div className="flex items-center justify-between px-5 py-5 border-b">
           <button
-            onClick={() => navigate("/RequestDemo")}
-            className="w-full px-5 py-3 rounded-full text-white bg-[#15BDFF] hover:bg-[#021D59] shadow-md"
+            onClick={() => {
+              navigate("/request-a-demo");
+              closeMobileMenu();
+            }}
+            className="px-4 py-2 text-sm font-medium text-[#021D59] border border-[#021D59] rounded-[9.28px]"
           >
             Request a Demo
           </button>
 
-          <ul className="mt-6 divide-y divide-gray-200">
+          <button onClick={closeMobileMenu}>
+            <X size={30} className="text-[#021D59]" />
+          </button>
+        </div>
+
+        {/* Scrollable Menu */}
+        <div className="max-h-[75vh] overflow-y-auto px-5 py-3">
+          <ul className="divide-y">
             {menuData.map((item, index) => (
               <MobileMenuItem
                 key={index}
                 item={item}
                 level={1}
                 closeMenu={closeMobileMenu}
+                isLast={index === menuData.length - 1}
               />
             ))}
           </ul>
@@ -85,7 +96,7 @@ const Header = () => {
         <div
           className="fixed inset-0 bg-black/40 z-30 lg:hidden"
           onClick={closeMobileMenu}
-        ></div>
+        />
       )}
     </header>
   );

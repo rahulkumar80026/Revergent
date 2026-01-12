@@ -72,13 +72,13 @@ const Footer = () => {
         {/* BOTTOM ROW: Socials & Disclaimer */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 space-y-4 md:space-y-0">
           <div className="text-[12px] text-white/50">
-            Headquartered in Noida INDIA | Global Delivery
+            Headquartered in Noida India | Global Delivery
           </div>
           
           <div className="flex space-x-4">
             {/* X Icon */}
             <a
-              href="#"
+              href="https://x.com/RevergentTech"
               aria-label="Follow us on X"
               className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 
                          hover:bg-[#00df9d] hover:border-[#00df9d] transition-all duration-300 group"
@@ -88,7 +88,7 @@ const Footer = () => {
 
             {/* LinkedIn Icon */}
             <a
-              href="#"
+              href="https://www.linkedin.com/company/revergent-technologies"
               aria-label="Follow us on LinkedIn"
               className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 
                          hover:bg-[#00df9d] hover:border-[#00df9d] transition-all duration-300 group"
