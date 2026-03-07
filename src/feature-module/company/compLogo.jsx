@@ -1,16 +1,14 @@
-import logo_1 from "../../assets/img/comp/logo.png";
-
 const CompLogo = ({ className }) => (
-  <a href="/" className={`flex-shrink-0 ${className}`}>
+  <a
+    href="/"
+    className={`flex-shrink-0 ${className}`}
+    aria-label="Revergent Technologies"
+  >
     <img
-      src={logo_1}
-      alt="Evergent Logo"
-      className="w-auto h-6 md:h-7 lg:h-12"
-      onError={(e) => {
-        e.target.onerror = null;
-        e.target.src =
-          "https://placehold.co/150x30/15BDFF/021D59?text=Evergent+Logo";
-      }}
+      src="/assets/company/logo.png"
+      alt="Revergent Technologies Logo"
+      // className="w-auto h-6 md:h-7 lg:h-14"
+      loading="eager"
     />
   </a>
 );

@@ -133,7 +133,7 @@
 // export default DesktopNavItem;
 
 import React from "react";
-import arrow from "../../assets/icon/arrow.svg";
+import arrow from "/assets/icon/arrow.svg";
 
 const DesktopNavItem = ({ item }) => {
   const hasSubmenu = Array.isArray(item.submenu) && item.submenu.length > 0;

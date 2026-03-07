@@ -58,10 +58,10 @@ const MobileMenuItem = ({ item, level, closeMenu, isLast = false }) => {
   }
 
   return (
-    <li className={showBorder ? "border-b border-[#15BDFF80]" : ""}>
+    <li className={showBorder ? "border-b border-[#15BDFF80]" : ""} >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex justify-between items-center w-full py-5 ${padding}`}
+        className={`flex active:bg-[#15bdff33] active:rounded-xl justify-between items-center w-full py-5 ${padding}`}
       >
         <span className={textClasses}>{item.title || item.section}</span>
         <ChevronDown

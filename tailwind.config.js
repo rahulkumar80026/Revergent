@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         agrandir: ["Agrandir", "sans-serif"],
+        kanit: ["Kanit", "sans-serif"],
       },
       colors: {
         primary: "var(--primary)",

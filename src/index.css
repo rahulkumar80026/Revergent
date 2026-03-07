@@ -1,25 +1,39 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Agrandir';
-  src: url('./assets/fonts/Agrandir-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Agrandir';
-  src: url('./assets/fonts/Agrandir-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
 /* Apply globally */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Agrandir', sans-serif;
+  list-style: none;
 }
+
+/* Agrandir Regular */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('/assets/fonts/Agrandir-Regular.woff2') format('woff2'),
+       url('/assets/fonts/Agrandir-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Agrandir Bold */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('/assets/fonts/Agrandir-TextBold.woff2') format('woff2'),
+       url('/assets/fonts/Agrandir-TextBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: 'Agrandir';
+  src: url('/fonts/Agrandir-Bold.woff2') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
 
 /* globals.css or tailwind base */
 .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -27,3 +41,18 @@ body {
 
 /* Agrandir font fallback — add @font-face if you host it */
 .font-agrandir { font-family: "Agrandir", sans-serif; }
+
+.stroke-blue {
+  color: #DFFAFE;
+  -webkit-text-stroke: 2px #55BBF9;
+}
+
+.stroke-green {
+  color: #E4FFF4;
+  -webkit-text-stroke: 2px #86EFAC;
+}
+
+.stroke-purple {
+  color: #F3E7FD;
+  -webkit-text-stroke: 2px #C084FC;
+}

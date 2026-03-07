@@ -1,4 +1,4 @@
-import iconHeart from "../../../../assets/json/icon-heart.json";
+const iconHeart = "/assets/json/icon-heart.json";
 
 export const contentData = {
   "Custom Web Applications": {

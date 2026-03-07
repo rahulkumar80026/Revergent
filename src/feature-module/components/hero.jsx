@@ -143,13 +143,13 @@
 // export default HeroSection;
 
 import React from "react";
-import lg_colored_bg from "../../assets/img/colored-bg.svg";
-import colored_bg from "../../assets/img/bg-colored-vector.svg";
-import dotted_icon from "../../assets/img/dotted-icon.svg";
-import paper_icon from "../../assets/img/paper-icon.svg";
-import dollar from "../../assets/img/dollar.svg";
-import violet_vector from "../../assets/img/violet-vector.svg";
-import card from "../../assets/img/card.svg";
+import lg_colored_bg from "/assets/img/colored-bg.svg";
+import colored_bg from "/assets/img/bg-colored-vector.svg";
+import dotted_icon from "/assets/img/dotted-icon.svg";
+import paper_icon from "/assets/img/paper-icon.svg";
+import dollar from "/assets/img/dollar.svg";
+import violet_vector from "/assets/img/violet-vector.svg";
+import card from "/assets/img/card.svg";
 
 const Hero = () => {
   return (

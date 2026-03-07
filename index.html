@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,13 @@
     <!-- ✅ Favicon -->
     <link rel="icon" href="/favicon.png" sizes="48x48" type="image/png" />
 
+    <!-- ✅ Google Font: Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- ✅ Mobile Friendly -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -44,7 +51,7 @@
 
     <meta
       property="og:title"
-      content="Engineering Tomorrow’s Solutions | Revergent Technologies"
+      content="Revergent Technologies | Engineering Tomorrow’s Solutions for Real-World Impact"
     />
     <meta
       property="og:description"
@@ -52,7 +59,7 @@
     />
     <meta
       property="og:image"
-      content="https://www.revergent.in/assets/og-image.png"
+      content="https://www.revergent.in/assets/company/og-image.png"
     />
     <meta property="og:url" content="https://www.revergent.in/" />
     <meta property="og:site_name" content="Revergent Technologies" />
@@ -61,7 +68,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Where Innovation Meets Real-World Impact | Revergent Technologies"
+      content="Revergent Technologies | Where Innovation Meets Real-World Impact"
     />
     <meta
       name="twitter:description"
@@ -69,7 +76,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://www.revergent.in/assets/og-image.png"
+      content="https://www.revergent.in/assets/company/og-image.png"
     />
     <meta name="twitter:site" content="@revergenttech" />
 
@@ -78,7 +85,6 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Revergent Technologies",
-        "alternateName": "Revergent",
         "url": "https://www.revergent.in/"
       }
     </script>
@@ -88,6 +94,7 @@
       {
         "@context": "https://schema.org",
         "@type": "Organization",
+        "@id": "https://www.revergent.in/#organization",
         "name": "Revergent Technologies",
         "url": "https://www.revergent.in",
         "logo": "https://www.revergent.in/logo.png",
@@ -123,18 +130,27 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "LocalBusiness",
+        "@id": "https://www.revergent.in/#localbusiness",
         "name": "Revergent Technologies",
         "url": "https://www.revergent.in",
         "logo": "https://www.revergent.in/logo.png",
-        "image": "https://www.revergent.in/assets/og-image.png",
+        "image": "https://www.revergent.in/assets/company/og-image.png",
         "description": "Revergent Technologies is a software development and digital transformation company in India providing custom ERP, CRM, mobile app and AI-driven solutions.",
         "telephone": "+91-8102445228",
         "email": "info@revergent.in",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "India",
+          "streetAddress": "Sec-02, Greater Noida West, Near Eros Sampoornam",
+          "addressLocality": "Noida",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "201306",
           "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.496,
+          "longitude": 77.536
         },
         "areaServed": {
           "@type": "Country",
@@ -158,14 +174,13 @@
     </script>
   </head>
 
-  <body>
+  <body class="font-agrandir">
     <!-- <h2>Software Development Services in India</h2>
     <p>
       Revergent Technologies is a software development company in India
       specializing in ERP, CRM, mobile applications, SaaS platforms, and
       AI-driven automation solutions...
     </p> -->
-
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

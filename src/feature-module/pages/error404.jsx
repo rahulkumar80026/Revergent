@@ -1,7 +1,7 @@
 import React from "react";
-import image1 from "../../assets/img/group-16664-1.png";
-import image2 from "../../assets/img/group-16664-1-1.png"; //Tab
-import image3 from "../../assets/img/group-16664-2.png"; //Mobile
+import image1 from "/assets/img/group-16664-1.png";
+import image2 from "/assets/img/group-16664-1-1.png"; //Tab
+import image3 from "/assets/img/group-16664-2.png"; //Mobile
 
 const Error404 = () => {
   return (

@@ -1,8 +1,5 @@
 import React from "react";
 import Button from "../../core/common/Button";
-import img1 from "../../assets/img/customer-retention-whitempaper-thumbnail-161x217.png";
-import img2 from "../../assets/img/aha-case-study-thumbnail-1-161x217.png";
-import img3 from "../../assets/img/cap-essentials-161x217.png";
 
 const data = [
   {
@@ -10,7 +7,7 @@ const data = [
     excerpt:
       "A clear guide to understanding why customers leave—and the steps you can take today to strengthen long-term loyalty.",
     badge: "Whitepaper",
-    img: img1,
+    img: "/assets/img/customer-retention-whitempaper-thumbnail-161x217.png",
     link: "https://revergent.in/",
   },
   {
@@ -19,7 +16,7 @@ const data = [
     excerpt:
       "How one team rebuilt their platform for faster performance, better customer experience, and long-term stability.",
     badge: "Case Study",
-    img: img2,
+    img: "/assets/img/aha-case-study-thumbnail-1-161x217.png",
     link: "https://revergent.in/",
   },
   {
@@ -27,7 +24,7 @@ const data = [
     excerpt:
       "See how AI can help predict risk, personalize engagement, and reduce churn before it impacts your bottom line.",
     badge: "Solution Briefs",
-    img: img3,
+    img: "/assets/img/cap-essentials-161x217.png",
     link: "https://revergent.in/",
   },
 ];

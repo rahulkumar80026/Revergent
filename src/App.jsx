@@ -74,10 +74,10 @@ const App = () => {
           <Route path="/products/cloud-crm" element={<Crm />} />
           <Route path="/products/ai-suite" element={<AiAutomationSuite />} />
 
-          <Route path="/solutions" element={<AboutUs isDark={isDark} />} />
-          <Route path="/about" element={<AboutUs isDark={isDark} />} />
-          <Route path="/contact" element={<Contact isDark={isDark} />} />
-          <Route path="/careers" element={<Careers isDark={isDark} />} />
+          <Route path="/solutions" element={<AboutUs />} />
+          <Route path="/company/about" element={<AboutUs />} />
+          <Route path="/company/contact" element={<Contact />} />
+          <Route path="/company/careers" element={<Careers />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
 

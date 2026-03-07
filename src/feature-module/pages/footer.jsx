@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import logo_1 from "../../assets/img/comp/logo_white.png";
 
 const Footer = () => {
   // Links updated for Revergent Technologies specialization
@@ -21,7 +20,12 @@ const Footer = () => {
     },
     {
       title: "Expertise",
-      links: ["Product Strategy", "UX/UI Design", "Data Engineering", "Legacy Modernization"],
+      links: [
+        "Product Strategy",
+        "UX/UI Design",
+        "Data Engineering",
+        "Legacy Modernization",
+      ],
     },
     {
       title: "Resources",
@@ -38,12 +42,16 @@ const Footer = () => {
       <div className="custom-container">
         {/* GRID LAYOUT */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 border-b border-white/10 pb-12">
-          
           {/* LOGO COLUMN */}
           <div className="col-span-2 lg:col-span-1">
-            <img src={logo_1} alt="Revergent Logo" className="h-[32px] mb-4" />
+            <img
+              src="/assets/company/logo_white.png"
+              alt="Revergent Logo"
+              className="h-[32px] mb-4"
+            />
             <p className="text-[13px] text-white/70 leading-relaxed">
-              Engineering smarter tomorrows through thoughtful software and AI solutions.
+              Engineering smarter tomorrows through thoughtful software and AI
+              solutions.
             </p>
             <p className="text-[13px] text-white/60 mt-4 italic">
               © Revergent Technologies.
@@ -74,7 +82,7 @@ const Footer = () => {
           <div className="text-[12px] text-white/50">
             Headquartered in Noida India | Global Delivery
           </div>
-          
+
           <div className="flex space-x-4">
             {/* X Icon */}
             <a
@@ -83,7 +91,10 @@ const Footer = () => {
               className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 
                          hover:bg-[#00df9d] hover:border-[#00df9d] transition-all duration-300 group"
             >
-              <FontAwesomeIcon icon={faXTwitter} className="w-4 h-4 text-white group-hover:text-[#021D59]" />
+              <FontAwesomeIcon
+                icon={faXTwitter}
+                className="w-4 h-4 text-white group-hover:text-[#021D59]"
+              />
             </a>
 
             {/* LinkedIn Icon */}
