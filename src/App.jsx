@@ -10,9 +10,10 @@ import UseCases from "./feature-module/components/UseCases";
 
 import BusinessSidekick from "./feature-module/components/BusinessSidekick/BusinessSidekick";
 
-import AboutUs from "./feature-module/pages/about";
-import Contact from "./feature-module/pages/contact";
-import Careers from "./feature-module/pages/career";
+import AboutUs from "./feature-module/pages/company/about";
+import Contact from "./feature-module/pages/company/contact";
+import Careers from "./feature-module/pages/company/career";
+import Leadership from "./feature-module/pages/company/leader";
 import Footer from "./feature-module/pages/footer";
 import AIChatbot from "./feature-module/components/ai/aIChatbot";
 import CookieConsentBanner from "./feature-module/components/CookieConsentBanner";
@@ -27,11 +28,20 @@ import Classora from "./feature-module/pages/products/classora";
 import Crm from "./feature-module/pages/products/crm";
 import AiAutomationSuite from "./feature-module/pages/products/aiAutomationSuite";
 import GetInTouch from "./feature-module/components/GetInTouch";
-import Leadership from "./feature-module/pages/leader";
-import Blog from "./feature-module/pages/blog";
+import Blog from "./feature-module/pages/resources/blog";
 import CustomSoftwareDevelopment from "./feature-module/pages/services/customSoftware";
 import MobileAppDevelopment from "./feature-module/pages/services/MobileAppDevelopment";
 import AIIntelligentAutomation from "./feature-module/pages/services/AIIntelligentAutomation";
+import EnterpriseBusinessSystems from "./feature-module/pages/services/EnterpriseBusinessSystems";
+import CloudDevOps from "./feature-module/pages/services/CloudDevOps";
+import DigitalMarketing from "./feature-module/pages/services/DigitalMarketing";
+import CaseStudies from "./feature-module/pages/resources/CaseStudies";
+import Whitepapers from "./feature-module/pages/resources/Whitepapers";
+import RetailPOS from "./feature-module/pages/solutions/RetailPOS";
+import EcommerceD2C from "./feature-module/pages/solutions/EcommerceD2C";
+import EdTechSolution from "./feature-module/pages/solutions/EdTechSolution";
+import HealthcareMedTech from "./feature-module/pages/solutions/HealthcareMedTech";
+import SMEDigitalTransformation from "./feature-module/pages/solutions/SMEDigitalTransformation";
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -91,9 +101,29 @@ const App = () => {
             path="/services/ai-automation"
             element={<AIIntelligentAutomation />}
           />
-          <Route path="/resources/blog" element={<Blog />} />
+          <Route
+            path="/services/enterprise-systems"
+            element={<EnterpriseBusinessSystems />}
+          />
+          <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+          <Route
+            path="/services/digital-marketing"
+            element={<DigitalMarketing />}
+          />
 
-          <Route path="/solutions" element={<AboutUs />} />
+          <Route path="/resources/blog" element={<Blog />} />
+          <Route path="/resources/case-studies" element={<CaseStudies />} />
+          <Route path="/resources/whitepapers" element={<Whitepapers />} />
+
+          <Route path="/solutions/retail-pos" element={<RetailPOS />} />
+          <Route path="/solutions/ecommerce-d2c" element={<EcommerceD2C />} />
+          <Route path="/solutions/edtech" element={<EdTechSolution />} />
+          <Route path="/solutions/healthcare" element={<HealthcareMedTech />} />
+          <Route
+            path="/solutions/sme-digital-transformation"
+            element={<SMEDigitalTransformation />}
+          />
+
           <Route path="/company/about" element={<AboutUs />} />
           <Route path="/company/leadership" element={<Leadership />} />
 

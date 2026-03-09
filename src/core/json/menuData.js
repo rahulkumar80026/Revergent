@@ -158,7 +158,7 @@ export const menuData = [
       },
       {
         title: "Growth & Digital Marketing",
-        href: "/services/growth-digital-marketing",
+        href: "/services/digital-marketing",
       },
     ],
   },

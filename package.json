@@ -15,13 +15,14 @@
     "@heroicons/react": "^2.2.0",
     "@iconify/react": "^6.0.2",
     "@tailwindcss/vite": "^4.1.14",
-    "framer-motion": "^12.23.22",
+    "framer-motion": "^12.35.1",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.545.0",
     "phosphor-react": "^1.4.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-intersection-observer": "^9.16.0",
+    "react-parallax-tilt": "^1.7.319",
     "react-router-dom": "^7.9.3"
   },
   "devDependencies": {
