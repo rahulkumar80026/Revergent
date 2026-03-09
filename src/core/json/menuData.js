@@ -189,7 +189,7 @@ export const menuData = [
     title: "Resources",
     href: "/resources",
     submenu: [
-      { title: "Blogs", href: "/resources/blogs" },
+      { title: "Blogs", href: "/resources/blog" },
       { title: "Case Studies", href: "/resources/case-studies" },
       { title: "Whitepapers", href: "/resources/whitepapers" },
     ],

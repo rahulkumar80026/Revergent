@@ -24,7 +24,6 @@ const RequestDemo = () => {
 
       {/* BODY SECTION */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        
         {/* LEFT CONTENT */}
         <div>
           <p className="text-[#021D59] text-[18px] leading-[28px] mb-6">
@@ -36,7 +35,7 @@ const RequestDemo = () => {
             In this personalized, one-on-one demo, a Revergent product expert
             will guide you through the right mix of tools—custom software,
             automation, mobile apps, and AI workflows—tailored to your business
-            goals.  
+            goals.
             <br />
             <br />
             Share your challenges, ask questions, and explore how we can help
@@ -49,7 +48,7 @@ const RequestDemo = () => {
           <form className="space-y-5">
             {/* Input */}
             <div>
-              <label className="text-[#021D59] text-[14px]">First Name *</label>
+              <label className="text-[#021D59] text-[14px]">Name *</label>
               <input
                 type="text"
                 className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF] outline-none"
@@ -57,30 +56,29 @@ const RequestDemo = () => {
             </div>
 
             <div>
-              <label className="text-[#021D59] text-[14px]">Last Name *</label>
+              <label className="text-[#021D59] text-[14px]">
+                Phone Number *
+              </label>
               <input
                 type="text"
                 className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF]"
               />
             </div>
-
             <div>
-              <label className="text-[#021D59] text-[14px]">Email *</label>
+              <label className="text-[#021D59] text-[14px]">Business Email *</label>
               <input
                 type="email"
                 className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF]"
               />
             </div>
-
             <div>
-              <label className="text-[#021D59] text-[14px]">Phone Number *</label>
+              <label className="text-[#021D59] text-[14px]">Organization *</label>
               <input
                 type="text"
                 className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF]"
               />
             </div>
-
-            <div>
+            {/* <div>
               <label className="text-[#021D59] text-[14px]">
                 Number of Users / Employees
               </label>
@@ -90,7 +88,7 @@ const RequestDemo = () => {
                 <option>201 – 500</option>
                 <option>500+</option>
               </select>
-            </div>
+            </div> */}
 
             <div>
               <label className="text-[#021D59] text-[14px]">Message</label>

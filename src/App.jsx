@@ -26,11 +26,17 @@ import Pos from "./feature-module/pages/products/pos";
 import Classora from "./feature-module/pages/products/classora";
 import Crm from "./feature-module/pages/products/crm";
 import AiAutomationSuite from "./feature-module/pages/products/aiAutomationSuite";
+import GetInTouch from "./feature-module/components/GetInTouch";
+import Leadership from "./feature-module/pages/leader";
+import Blog from "./feature-module/pages/blog";
+import CustomSoftwareDevelopment from "./feature-module/pages/services/customSoftware";
+import MobileAppDevelopment from "./feature-module/pages/services/MobileAppDevelopment";
+import AIIntelligentAutomation from "./feature-module/pages/services/AIIntelligentAutomation";
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
   const [cookieConsentStatus, setCookieConsentStatus] = useState(
-    localStorage.getItem(COOKIE_KEY)
+    localStorage.getItem(COOKIE_KEY),
   );
 
   useEffect(() => {
@@ -73,11 +79,28 @@ const App = () => {
           <Route path="/products/classora" element={<Classora />} />
           <Route path="/products/cloud-crm" element={<Crm />} />
           <Route path="/products/ai-suite" element={<AiAutomationSuite />} />
+          <Route
+            path="/services/custom-software-development"
+            element={<CustomSoftwareDevelopment />}
+          />
+          <Route
+            path="/services/mobile-app-development"
+            element={<MobileAppDevelopment />}
+          />
+          <Route
+            path="/services/ai-automation"
+            element={<AIIntelligentAutomation />}
+          />
+          <Route path="/resources/blog" element={<Blog />} />
 
           <Route path="/solutions" element={<AboutUs />} />
           <Route path="/company/about" element={<AboutUs />} />
+          <Route path="/company/leadership" element={<Leadership />} />
+
           <Route path="/company/contact" element={<Contact />} />
           <Route path="/company/careers" element={<Careers />} />
+          <Route path="/careers/get-in-touch" element={<GetInTouch />} />
+
           <Route path="*" element={<Error404 />} />
         </Routes>
 
