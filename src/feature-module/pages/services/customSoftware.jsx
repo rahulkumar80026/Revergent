@@ -121,7 +121,7 @@ export default function RevergentSoftwareDevelopment() {
         </div>
       </section> */}
 
-      <section className="pt-18 px-6">
+      <section className="pt-6 pb-10">
         <div className="custom-container mx-auto">
           <div className="relative rounded-[28px] overflow-hidden shadow-xl bg-[#021D59]">
             <img
@@ -145,7 +145,7 @@ export default function RevergentSoftwareDevelopment() {
       </section>
 
       {/* --- CAPABILITIES (GRID LOOK) --- */}
-      <section className="py-24 px-6">
+      <section className="py-10 px-6">
         <div className="custom-container mx-auto">
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-4 border-l-4 border-[#2cc5d5] pl-6 uppercase tracking-wider">
@@ -300,7 +300,7 @@ export default function RevergentSoftwareDevelopment() {
       </section>
 
       {/* --- CTA (SHARP & DARK) --- */}
-      <section className="py-24 px-6 bg-[#021D59] text-white">
+      <section className="py-10 px-6 bg-[#021D59] text-white">
         <div className="max-w-5xl mx-auto border-t border-b border-white/10 py-16 flex flex-col md:flex-row items-center justify-between gap-10">
           <div>
             <h2 className="text-4xl font-bold mb-4">
