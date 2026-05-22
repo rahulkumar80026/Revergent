@@ -1,6 +1,29 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
 
 const NextStep = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          alert("Message Sent Successfully");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error);
+          alert("Failed to send message");
+        },
+      );
+  };
+
   return (
     <section className="relative w-full">
       {/* 1. TOP GRADIENT (Desktop Only) */}
@@ -8,7 +31,7 @@ const NextStep = () => {
 
       {/* 2. MAIN SECTION WITH BACKGROUND */}
       <div
-        className="relative w-full min-h-[900px] lg:min-h-[490px] bg-cover bg-center bg-no-repeat"
+        className="relative w-full min-h-[900px] lg:min-h-[600px] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://evergent.com/wp-content/themes/corppix/build/images/next-step-bg-hd.jpg')`,
           backgroundColor: "#0B0F63",
@@ -35,51 +58,77 @@ const NextStep = () => {
               <h4 className="text-[#021D59] text-[20px] md:text-[22px] mb-8 font-medium text-center">
                 You can always leave us a message
               </h4>
+              <form onSubmit={sendEmail}>
+                <div className="space-y-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your name*"
+                    className="w-full border border-[#D8D8D8] rounded-[10px] px-5 py-4 text-[16px] outline-none focus:ring-1 focus:ring-[#15BDFF]"
+                    required
+                  />
 
-              <div className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your name*"
-                  className="w-full border border-[#D8D8D8] rounded-[10px] px-5 py-4 text-[16px] outline-none focus:ring-1 focus:ring-[#15BDFF]"
-                />
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Your phone number*"
+                    className="w-full border border-[#D8D8D8] rounded-[10px] px-5 py-4 text-[16px] outline-none focus:ring-1 focus:ring-[#15BDFF]"
+                    required
+                  />
 
-                <input
-                  type="email"
-                  placeholder="What's your email?*"
-                  className="w-full border border-[#D8D8D8] rounded-[10px] px-5 py-4 text-[16px] outline-none focus:ring-1 focus:ring-[#15BDFF]"
-                />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="What's your email?*"
+                    className="w-full border border-[#D8D8D8] rounded-[10px] px-5 py-4 text-[16px] outline-none focus:ring-1 focus:ring-[#15BDFF]"
+                    required
+                  />
 
-                <textarea
-                  placeholder="Your Message"
-                  className="w-full h-[130px] border border-[#D8D8D8] rounded-[10px] px-5 py-4 text-[16px] outline-none resize-none focus:ring-1 focus:ring-[#15BDFF]"
-                ></textarea>
+                  <input
+                    type="text"
+                    name="organization"
+                    placeholder="Your organization*"
+                    className="w-full border border-[#D8D8D8] rounded-[10px] px-5 py-4 text-[16px] outline-none focus:ring-1 focus:ring-[#15BDFF]"
+                    required
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    className="w-full h-[130px] border border-[#D8D8D8] rounded-[10px] px-5 py-4 text-[16px] outline-none resize-none focus:ring-1 focus:ring-[#15BDFF]"
+                    required
+                  ></textarea>
 
-                <div className="pt-2">
-                  <p className="text-[#021D59] text-[15px] font-medium mb-2">
-                    Please verify your request. *
-                  </p>
-                  <div className="border border-[#D8D8D8] rounded-[4px] p-3 bg-[#F9F9F9] flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <input
-                        type="checkbox"
-                        className="w-6 h-6 rounded border-gray-300"
+                  <div className="pt-2">
+                    <p className="text-[#021D59] text-[15px] font-medium mb-2">
+                      Please verify your request. *
+                    </p>
+                    <div className="border border-[#D8D8D8] rounded-[4px] p-3 bg-[#F9F9F9] flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <input
+                          type="checkbox"
+                          className="w-6 h-6 rounded border-gray-300"
+                          required
+                        />
+                        <span className="text-[14px] text-gray-600 font-medium">
+                          I'm not a robot
+                        </span>
+                      </div>
+                      <img
+                        src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                        alt="captcha"
+                        className="w-8 opacity-80"
                       />
-                      <span className="text-[14px] text-gray-600 font-medium">
-                        I'm not a robot
-                      </span>
                     </div>
-                    <img
-                      src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
-                      alt="captcha"
-                      className="w-8 opacity-80"
-                    />
                   </div>
-                </div>
 
-                <button className="w-full bg-[#15BDFF] hover:bg-[#021D59] text-white py-3 rounded-lg font-medium transition-all mt-4 tracking-wider shadow-md active:scale-[0.98]">
-                  Submit
-                </button>
-              </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-[#15BDFF] hover:bg-[#021D59] text-white py-3 rounded-lg font-medium transition-all mt-4 tracking-wider shadow-md active:scale-[0.98]"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

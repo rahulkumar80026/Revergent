@@ -1,6 +1,30 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
 
 const RequestDemo = () => {
+  const sendEmail = (e) => {
+    console.log("Form submitted");
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          alert("Message Sent Successfully");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error);
+          alert("Failed to send message");
+        },
+      );
+  };
+
   return (
     <section className="w-full bg-white">
       {/* HERO SECTION */}
@@ -45,62 +69,68 @@ const RequestDemo = () => {
 
         {/* RIGHT FORM */}
         <div className="bg-white rounded-2xl shadow-[0_8px_28px_rgba(0,0,0,0.12)] p-8 w-full">
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={sendEmail}>
             {/* Input */}
             <div>
-              <label className="text-[#021D59] text-[14px]">Name *</label>
+              <label className="text-[#021D59] text-[14px]">
+                Name <span className="text-red-500">*</span>
+              </label>
               <input
                 type="text"
+                name="name"
                 className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF] outline-none"
+                required
               />
             </div>
 
             <div>
               <label className="text-[#021D59] text-[14px]">
-                Phone Number *
+                Phone Number <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
-                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF]"
+                name="phone"
+                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF] focus:outline-none"
+                required
               />
             </div>
             <div>
-              <label className="text-[#021D59] text-[14px]">Business Email *</label>
+              <label className="text-[#021D59] text-[14px]">
+                Business Email <span className="text-red-500">*</span>
+              </label>
               <input
                 type="email"
-                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF]"
+                name="email"
+                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF] focus:outline-none"
+                required
               />
             </div>
             <div>
-              <label className="text-[#021D59] text-[14px]">Organization *</label>
+              <label className="text-[#021D59] text-[14px]">
+                Organization <span className="text-red-500">*</span>
+              </label>
               <input
                 type="text"
-                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF]"
+                name="organization"
+                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF] focus:outline-none"
+                required
               />
             </div>
-            {/* <div>
-              <label className="text-[#021D59] text-[14px]">
-                Number of Users / Employees
-              </label>
-              <select className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF]">
-                <option>1 – 50</option>
-                <option>51 – 200</option>
-                <option>201 – 500</option>
-                <option>500+</option>
-              </select>
-            </div> */}
-
             <div>
-              <label className="text-[#021D59] text-[14px]">Message</label>
+              <label className="text-[#021D59] text-[14px]">
+                Message <span className="text-red-500">*</span>
+              </label>
               <textarea
                 rows="3"
-                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF]"
+                name="message"
+                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15BDFF] focus:outline-none"
+                required
               ></textarea>
             </div>
 
             {/* Checkbox */}
             <div className="flex items-center gap-2">
-              <input type="checkbox" className="w-4 h-4" />
+              <input type="checkbox" className="w-4 h-4" required />
               <p className="text-[13px] text-[#4A5C80]">
                 I agree to receive updates from Revergent.
               </p>
