@@ -3,6 +3,7 @@ import React from "react";
 const WhyRevergent = () => {
   return (
     <section className="relative w-full bg-white pt-24 pb-30 overflow-hidden">
+      <h2 className="sr-only">Why Choose Revergent Technologies</h2>
       {/* MAIN PARAGRAPH */}
       <div className="max-w-[900px] mx-auto text-center px-6 mb-24">
         <p className="text-[#021D59] text-[24px] leading-[34px] font-normal">

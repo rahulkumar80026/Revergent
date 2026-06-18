@@ -134,6 +134,7 @@
 
 import React from "react";
 import arrow from "/assets/icon/arrow.svg";
+import { Link } from "react-router-dom";
 
 const DesktopNavItem = ({ item }) => {
   const hasSubmenu = Array.isArray(item.submenu) && item.submenu.length > 0;
@@ -195,8 +196,8 @@ const DesktopNavItem = ({ item }) => {
             <ul className="space-y-2">
               {section.items?.map((link, i) => (
                 <li key={i}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="
                     block text-[15px]
                     text-[#021D59]
@@ -205,7 +206,7 @@ const DesktopNavItem = ({ item }) => {
                   "
                   >
                     {link.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -231,8 +232,8 @@ const DesktopNavItem = ({ item }) => {
     >
       {items.map((s, i) => (
         <li key={i}>
-          <a
-            href={s.href}
+          <Link
+            to={s.href}
             className="
               block px-4 py-2.5
               text-[14px] text-[#021D59]
@@ -245,7 +246,7 @@ const DesktopNavItem = ({ item }) => {
             // hover:bg-[#15bdff33]
           >
             {s.title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
@@ -253,8 +254,8 @@ const DesktopNavItem = ({ item }) => {
 
   return (
     <li className="group relative">
-      <a
-        href={item.href}
+      <Link
+        to={item.href}
         className="
           text-[#021D59]
           text-[15px] font-medium
@@ -275,7 +276,7 @@ const DesktopNavItem = ({ item }) => {
             alt=""
           />
         )}
-      </a>
+      </Link>
 
       {hasSubmenu &&
         (isMegaMenu

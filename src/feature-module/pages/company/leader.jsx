@@ -1,4 +1,5 @@
 import { Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Leadership() {
   const team = [
@@ -9,7 +10,7 @@ export default function Leadership() {
       color: "#15BDFF",
     },
     {
-      name: "Rahul",
+      name: "Rahul kumar",
       role: "Chief Technology Officer",
       img: "https://randomuser.me/api/portraits/men/45.jpg",
       color: "#77efab",
@@ -44,12 +45,12 @@ export default function Leadership() {
                 Innovating. Building. Leading.
               </h3>
 
-              <p className="text-gray-200 leading-relaxed">
+              <p className="text-gray-200 leading-relaxed font-light">
                 Our leadership team drives Revergent Technologies with a vision
                 to create powerful software products and transformative digital
                 solutions. By combining technical excellence, innovation, and
                 strategic thinking, we help organizations build smarter, faster,
-                and more scalable technology platforms.
+                and more scalable technology platforms. Our directors guide our cross-functional engineering teams in developing advanced systems, from client-specific <Link to="/services/custom-software-development" className="text-[#15BDFF] hover:underline font-normal">custom software development</Link> projects to our integrated <Link to="/products/cloud-crm" className="text-[#15BDFF] hover:underline font-normal">Revergent Cloud CRM</Link> suite. We focus on modern AI implementations, secure cloud architectures, and database optimizations that deliver long-term value. We are committed to fostering deep client partnerships built on technical integrity, speed, and precision. Whether you are looking to start a digital project or want to join our team, we encourage you to <Link to="/company/contact" className="text-[#15BDFF] hover:underline font-normal">connect with our consultants</Link> or browse our <Link to="/company/careers" className="text-[#15BDFF] hover:underline font-normal">career opportunities</Link>.
               </p>
             </div>
 

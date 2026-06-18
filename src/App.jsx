@@ -18,7 +18,8 @@ import Footer from "./feature-module/pages/footer";
 import AIChatbot from "./feature-module/components/ai/aIChatbot";
 import CookieConsentBanner from "./feature-module/components/CookieConsentBanner";
 import { COOKIE_KEY } from "../environment";
-import ScrollToTop from "./core/common/ScrollToTop";
+// import ScrollToTop from "./core/common/ScrollToTop";
+import SEOHelper from "./core/common/SEOHelper";
 import BigIdeas from "./feature-module/components/BigIdeas";
 import NextStep from "./feature-module/components/NextStep";
 import RequestDemo from "./feature-module/components/RequestDemo";
@@ -43,8 +44,16 @@ import EdTechSolution from "./feature-module/pages/solutions/EdTechSolution";
 import HealthcareMedTech from "./feature-module/pages/solutions/HealthcareMedTech";
 import SMEDigitalTransformation from "./feature-module/pages/solutions/SMEDigitalTransformation";
 
+import ServicesOverview from "./feature-module/pages/services/services";
+import SolutionsOverview from "./feature-module/pages/solutions/solutions";
+import ProductsOverview from "./feature-module/pages/products/products";
+import ResourcesOverview from "./feature-module/pages/resources/resources";
+import CompanyOverview from "./feature-module/pages/company/company";
+
 const App = () => {
+  // eslint-disable-next-line no-unused-vars
   const [isDark, setIsDark] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [cookieConsentStatus, setCookieConsentStatus] = useState(
     localStorage.getItem(COOKIE_KEY),
   );
@@ -63,7 +72,8 @@ const App = () => {
 
   return (
     <Router>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
+      <SEOHelper />
       <div className="min-h-screen bg-gray-50 font-agrandir">
         <Topbar />
         <Header />
@@ -85,6 +95,14 @@ const App = () => {
             }
           />
           <Route path="/request-a-demo" element={<RequestDemo />} />
+
+          {/* CATEGORY OVERVIEW ROUTES */}
+          <Route path="/services" element={<ServicesOverview />} />
+          <Route path="/solutions" element={<SolutionsOverview />} />
+          <Route path="/products" element={<ProductsOverview />} />
+          <Route path="/resources" element={<ResourcesOverview />} />
+          <Route path="/company" element={<CompanyOverview />} />
+
           <Route path="/products/pos" element={<Pos />} />
           <Route path="/products/classora" element={<Classora />} />
           <Route path="/products/cloud-crm" element={<Crm />} />

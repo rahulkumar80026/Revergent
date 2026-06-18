@@ -59,17 +59,25 @@ const MobileMenuItem = ({ item, level, closeMenu, isLast = false }) => {
 
   return (
     <li className={showBorder ? "border-b border-[#15BDFF80]" : ""} >
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`flex active:bg-[#15bdff33] active:rounded-xl justify-between items-center w-full py-5 ${padding}`}
-      >
-        <span className={textClasses}>{item.title || item.section}</span>
-        <ChevronDown
-          className={`w-6 h-6 text-[#021D59] transition-transform ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
-      </button>
+      <div className={`flex justify-between items-center w-full ${padding}`}>
+        <Link
+          to={item.href || "#"}
+          onClick={closeMenu}
+          className={`${textClasses} flex-1 py-5`}
+        >
+          {item.title || item.section}
+        </Link>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="p-3 -mr-3 active:bg-[#15bdff33] active:rounded-xl focus:outline-none"
+        >
+          <ChevronDown
+            className={`w-6 h-6 text-[#021D59] transition-transform ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+      </div>
 
       {isOpen && (
         <ul className="bg-[#F7F9FC]">

@@ -46,9 +46,9 @@ const TrustedBy = () => {
   return (
     <section className="w-full bg-white py-8 sm:py-10 overflow-hidden relative">
       {/* TITLE */}
-      <p className="text-center text-[14px] sm:text-[16px] text-[#021D59] mb-6 font-[400] relative z-[10]">
+      <h2 className="text-center text-[14px] sm:text-[16px] text-[#021D59] mb-6 font-[400] relative z-[10]">
         Trusted by global leaders
-      </p>
+      </h2>
 
       {/* FADE EFFECTS */}
       <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-white to-transparent pointer-events-none z-[5]" />

@@ -80,7 +80,7 @@ const Footer = () => {
         {/* BOTTOM ROW: Socials & Disclaimer */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 space-y-4 md:space-y-0">
           <div className="text-[12px] text-white/50">
-            Headquartered in Noida India | Global Delivery
+            Headquartered in Noida, Uttar Pradesh | Ranchi, Jharkhand | Global Delivery
           </div>
 
           <div className="flex space-x-4">

@@ -17,7 +17,7 @@ const Header = () => {
     <header className="relative w-full sticky top-0 z-50 bg-white border-b border-[#EBEEF5] shadow-sm">
       <div className="custom-container">
         <div className="flex items-center justify-between h-[50px] lg:h-20">
-          <h1 className="sr-only">Revergent Technologies</h1>
+          <div className="sr-only">Revergent Technologies</div>
           {/* LEFT: LOGO + NAV */}
           <div className="flex items-center gap-4">
             <CompLogo className="w-28 md:w-32 lg:w-60" />

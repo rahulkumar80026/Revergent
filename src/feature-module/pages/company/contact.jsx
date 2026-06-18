@@ -1,4 +1,5 @@
 import { MapPin, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -60,12 +61,12 @@ const Contact = () => {
             Innovation Starts with a Conversation
           </h2>
 
-          <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
+          <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg font-light">
             At Revergent Technologies, we specialize in building intelligent
             software solutions that empower businesses to grow faster and
-            operate smarter. Whether you're looking to modernize your systems,
-            build scalable applications, integrate AI, or accelerate digital
-            transformation, our experienced team is ready to help.
+            operate smarter. Whether you're looking to modernize legacy IT systems,
+            build high-performance mobile applications, deploy custom AI models,
+            or accelerate your overall digital strategy, our engineering team is here to guide you. We offer end-to-end consulting services spanning from architectural design to post-launch product iterations. Check out our <Link to="/company/about" className="text-[#2cc5d5] hover:underline font-normal">About Us page</Link> to learn more about our company background and client success stories, or view our core <Link to="/services/custom-software-development" className="text-[#2cc5d5] hover:underline font-normal">software engineering services</Link>.
           </p>
 
           {/* WHY CHOOSE US */}

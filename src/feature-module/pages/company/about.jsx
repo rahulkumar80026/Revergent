@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const AboutUs = () => {
   const navigate = useNavigate();
@@ -26,11 +26,11 @@ const AboutUs = () => {
                 The Power is in <br /> Your Hands
               </h1>
 
-              <p className="text-base md:text-lg text-white/90 leading-relaxed">
+              <p className="text-base md:text-lg text-white/90 leading-relaxed font-light">
                 We exist so you can win at your own game. Service providers
                 operate in rapidly changing ecosystems with shifting customer
                 demands. We enable you to onboard swiftly, retain seamlessly,
-                and improve perpetually.
+                and improve perpetually. Through our robust <Link to="/services/custom-software-development" className="text-[#15BDFF] hover:underline font-normal">custom software development services</Link>, we provide the building blocks for modern digital transformation.
               </p>
             </div>
           </div>
@@ -39,12 +39,12 @@ const AboutUs = () => {
 
       {/* ================= INTRO ================= */}
       <section className="py-20">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center px-6">
           <h2 className="text-3xl font-semibold mb-6">Who We Are</h2>
-          <p className="text-lg text-[#64748B] leading-relaxed">
+          <p className="text-lg text-[#64748B] leading-relaxed max-w-3xl mx-auto font-light">
             Revergent is a global technology company helping enterprises
             simplify complexity, accelerate innovation, and unlock growth
-            through scalable, cloud-native platforms.
+            through scalable, cloud-native platforms. By combining top-tier software engineering with specialized domain expertise, we build systems that handle millions of events and transactions. We partner with companies to create next-generation applications, leverage <Link to="/services/ai-automation" className="text-[#004aad] hover:underline font-normal">AI automation</Link>, and optimize development lifecycle workflows.
           </p>
         </div>
       </section>
@@ -132,16 +132,16 @@ const AboutUs = () => {
           <h2 className="text-3xl font-semibold mb-8">What We Do</h2>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <p className="text-[#64748B] leading-relaxed">
+            <p className="text-[#64748B] leading-relaxed font-light">
               We deliver modular, cloud-native platforms that enable enterprises
               to manage the entire customer lifecycle — from onboarding and
-              monetization to retention and growth.
+              monetization to retention and growth. Our solutions include high-performance products like our custom <Link to="/products/cloud-crm" className="text-[#004aad] hover:underline font-normal">Revergent Cloud CRM</Link>, tailored for growth-oriented sales teams and operational efficiency.
             </p>
 
-            <p className="text-[#64748B] leading-relaxed">
+            <p className="text-[#64748B] leading-relaxed font-light">
               Our solutions are designed to scale globally, adapt quickly, and
               integrate seamlessly with existing ecosystems, ensuring long-term
-              value and operational efficiency.
+              value and operational efficiency. We utilize automated workflows and advanced cloud DevOps patterns to ensure our clients experience zero-downtime performance and seamless deployment.
             </p>
           </div>
         </div>
@@ -169,6 +169,12 @@ const AboutUs = () => {
                 <p className="text-sm text-[#64748B] mt-1">{leader.role}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center max-w-2xl mx-auto">
+            <p className="text-[#64748B] leading-relaxed font-light">
+              Our leadership team brings together decades of expertise in building enterprise software, managing cloud deployments, and launching secure Web3 systems. Together, we work to cultivate an inclusive culture centered on engineering excellence. If you are passionate about building the future, explore our <Link to="/company/careers" className="text-[#004aad] hover:underline font-normal">current job openings</Link> or get in touch with our recruiting team.
+            </p>
           </div>
         </div>
       </section>

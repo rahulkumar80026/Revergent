@@ -61,8 +61,10 @@
 
 import { useState } from "react";
 import { Search } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Careers() {
+  const navigate = useNavigate();
   const jobs = [
     {
       title: "Frontend Developer",
@@ -86,8 +88,10 @@ export default function Careers() {
     },
   ];
 
+  // eslint-disable-next-line no-unused-vars
   const [search, setSearch] = useState("");
 
+  // eslint-disable-next-line no-unused-vars
   const filteredJobs = jobs.filter((job) =>
     job.title.toLowerCase().includes(search.toLowerCase()),
   );
@@ -102,10 +106,10 @@ export default function Careers() {
             Big Ideas Require <br /> Big Talent
           </h1>
 
-          <p className="max-w-xl text-lg text-gray-200 mb-8">
+          <p className="max-w-xl text-lg text-gray-200 mb-8 font-light">
             At Revergent Technologies we build advanced digital solutions, cloud
             platforms and enterprise software used by businesses across
-            industries. Join a team that is shaping the future of technology.
+            industries. Join a team that is shaping the future of technology. We collaborate globally to implement robust systems using modern tools like React, cloud orchestration, and database scaling. To learn about our capabilities, check out our <Link to="/services/custom-software-development" className="text-[#2cc5d5] hover:underline font-normal">custom software services</Link> or read our recent <Link to="/resources/case-studies" className="text-[#2cc5d5] hover:underline font-normal">customer case studies</Link>.
           </p>
 
           <button
@@ -337,17 +341,17 @@ export default function Careers() {
                 Build the Future with Revergent
               </h2>
 
-              <p className="text-gray-300 mb-8">
+              <p className="text-gray-300 mb-8 font-light">
                 We’re always looking for talented engineers, designers, and
                 problem solvers who are passionate about building innovative
                 technology. If you don't see a position that matches your
                 skills, share your profile with us — the right opportunity might
-                be just around the corner.
+                be just around the corner. Submit your profile by visiting our <Link to="/careers/get-in-touch" className="text-cyan-300 hover:underline font-normal">careers get in touch page</Link>, or reach out via our general <Link to="/company/contact" className="text-cyan-300 hover:underline font-normal">contact team</Link>.
               </p>
 
               <button
                 className="bg-white text-[#0b1d4d] px-6 py-3 rounded-xl font-medium hover:scale-105 transition"
-                onClick={() => (window.location.href = "/careers/get-in-touch")}
+                onClick={() => navigate("/careers/get-in-touch")}
               >
                 Get in touch
               </button>

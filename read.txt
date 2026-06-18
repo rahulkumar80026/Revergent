@@ -1,0 +1,43 @@
+Act as a senior React + Tailwind CSS developer and carefully analyze the current website project folder before making any changes.
+
+Goal:
+When the user clicks the main navbar items such as Services, Solutions, Products, Resources, and Company, a proper page must open for that navbar item. That page should show content that is a combined/mixed layout of the dropdown submenu items under that navbar. For example, clicking Services should open a Services page that includes all service submenu items in a well-organized section/card/grid layout. Do the same for every top-level navbar item.
+
+Very important constraints:
+- Do not change the existing design, colors, typography, spacing, or overall UI style.
+- Preserve the current text format and color exactly as much as possible.
+- Do not break any existing pages, routes, components, or animations.
+- Only add what is needed for this navbar-page navigation behavior.
+- Keep the current branding and visual identity unchanged.
+- Reuse the existing Tailwind classes and current theme tokens already used in the project.
+- Use the current menu data and existing route structure wherever possible.
+- If any top-level navbar route already exists, enhance it instead of replacing it.
+- If a submenu page already exists, keep it intact.
+- Make sure desktop and mobile navigation both work correctly.
+
+Implementation requirements:
+1. Inspect the current project structure carefully.
+2. Find the navbar menu data and route setup.
+3. Create or complete pages for each main navbar category:
+   - Services
+   - Solutions
+   - Products
+   - Resources
+   - Company
+4. Each category page should display the related dropdown items in a clean grouped format.
+5. The page content should feel like a merged summary of the dropdown items, not a random new design.
+6. Keep all current colors, fonts, and text styles consistent with the existing website.
+7. Ensure clicking navbar text navigates to the correct page.
+8. Ensure the dropdown items inside those pages are meaningful, properly linked, and visually organized.
+9. Do not alter any previous functionality unless it is required for this navigation update.
+10. Return only the necessary code changes.
+
+Important:
+- Analyze the current  file first.
+- Match the existing coding style in the project.
+- Make the update production-ready.
+- Do not redesign the site.
+- Do not change previous things that are already working.
+
+Deliverable:
+Update the project so main navbar items open their own pages and those pages show combined dropdown content while keeping the exact existing look and feel.
